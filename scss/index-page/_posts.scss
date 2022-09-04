@@ -1,0 +1,151 @@
+.posts {
+  padding: 125px 0;
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    margin-bottom: 70px;
+    text-align: left;
+  }
+
+  &__item {
+    max-width: 420px;
+    width: 100%;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 20px 0px 60px 0px rgb(202 202 202 / 35%);
+    }
+  }
+
+  &__img {
+    margin-bottom: 30px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__btn {
+    margin-top: 70px;
+  }
+}
+
+.newsletter {
+  padding: 70px 0;
+  background-color: $light;
+  margin-bottom: 100px;
+  
+  &__inner {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $dark;
+  }
+  
+  &__input {
+    max-width: 400px;
+    width: 100%;
+    padding: 10px 3px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $black;
+    outline: transparent;
+    transform: translateX(20px);
+  }
+
+  &__btn {
+    background-image: url(../images/icons/send.png);
+    width: 32px;
+    height: 17px;
+    border: none;
+    background-color: transparent;
+    transform: translate(-20px, 3px);
+    transition: transform 0.3s, opacity 0.3s;
+
+    &:hover {
+      transform: translate(-15px, 3px);
+    }
+    
+    &:focus,
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .posts {
+    padding: 90px 0;
+
+    &__list {
+      grid-gap: 45px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .posts {
+    padding: 70px 0;
+
+    &__list {
+      grid-gap: 30px;
+      margin-bottom: 25px;
+    }
+
+    &__img {
+      margin-bottom: 15px;
+    }
+
+    &__btn {
+      margin-top: 45px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .posts {
+    padding: 35px 0;
+
+    &__list {
+      grid-template-columns: 1fr;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      margin: 0 auto;
+    }
+
+    &__img {
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      margin-top: 0;
+    }
+  }
+
+  .newsletter {
+    &__input {
+      max-width: 280px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .newsletter {
+    &__input {
+      max-width: 230px;
+    }
+  }
+}

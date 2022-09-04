@@ -1,0 +1,142 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $white;
+  color: $default;
+  font-family: $playfair;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1090px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-post {
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 65px 0 85px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.subtitle {
+  font-family: $ubuntu;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $grey;
+  margin-bottom: 25px;
+}
+
+.button {
+  padding: 16px 30px;
+  display: inline-block;
+  border: solid 1px $default;
+  color: $default;
+  font-size: 20px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: $light;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
+  }
+
+  &:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wide {
+  padding-left: 70px;
+}
+
+@media (max-width: 992px) {
+  .section {
+    padding: 90px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 45px 0 65px;
+  }
+
+  .subtitle {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .wide {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 25px 0 45px;
+  }
+
+  .subtitle {
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .subtitle {
+    margin-bottom: 5px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}

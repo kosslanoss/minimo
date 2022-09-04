@@ -1,0 +1,128 @@
+.sidebar {
+  max-width: 290px;
+  width: 100%;
+  height: max-content;
+  position: sticky;
+  top: 0;
+  padding-left: 40px;
+  
+  &__img {
+    display: block;
+  }
+
+  &__person {
+    margin-bottom: 65px;
+  }
+
+  &__person-img {
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__person-title {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  &__person-text {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .share__list {
+    justify-content: flex-start;
+  }
+
+  &__popular {
+    margin-bottom: 50px;
+  }
+
+  &__post:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__post-title {
+    display: block;
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      background-image: url(../images/icons/dot.png);
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      left: 3px;
+      top: 10px;
+    }
+  }
+
+  &__post-subtitle {
+    padding-left: 35px;
+    text-transform: uppercase;
+    font-family: $ubuntu;
+    font-weight: 300;
+    font-size: 12px;
+    color: $grey;
+  }
+
+  &__banner {
+    max-width: 250px;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 32px;
+  }
+
+  &__banner-size,
+  &__banner-text {
+    display: block;
+    font-family: $ubuntu;
+    font-weight: 300;
+    color: $white;
+  }
+
+  &__banner-size {
+    font-size: 48px;
+    line-height: 1.5;
+  }
+
+  &__banner-text {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding-left: 15px;
+
+    &__person {
+      margin-bottom: 35px;
+    }
+
+    &__popular {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    padding-left: 0;
+    margin-bottom: 35px;
+  }
+}

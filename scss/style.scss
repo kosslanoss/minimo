@@ -1,0 +1,19 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'libs';
+
+@import './components/header';
+@import './components/hero';
+@import './components/footer';
+@import './index-page/posts';
+@import './single-post/post-one';
+@import './single-post/favourite';
+@import './single-post/comments';
+@import './single-post/sidebar';
+
+
+
+
+@import 'media';
